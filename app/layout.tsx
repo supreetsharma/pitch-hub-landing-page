@@ -1,29 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Open_Sans } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const openSans = Open_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PitchHub - Turn Leads into Custom Microsites in Under 3 Minutes",
+  title: "PitchHub - Personalized Microsites for Sales",
   description:
-    "Transform your sales process with AI-powered microsites. Create personalized, on-brand experiences for every prospect in minutes, not hours.",
-  keywords: "sales, microsites, personalization, AI, lead generation, B2B, sales tools",
-  authors: [{ name: "PitchHub" }],
-  openGraph: {
-    title: "PitchHub - Turn Leads into Custom Microsites",
-    description:
-      "AI-powered microsites that convert. Create personalized experiences for every prospect in under 3 minutes.",
-    type: "website",
-    url: "https://pitchub.com",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PitchHub - Turn Leads into Custom Microsites",
-    description:
-      "AI-powered microsites that convert. Create personalized experiences for every prospect in under 3 minutes.",
-  },
+    "Transform leads into personalized microsites in under 3 minutes. Make personalization your #1 revenue channel.",
     generator: 'v0.dev'
 }
 
@@ -33,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={openSans.className}>{children}</body>
     </html>
   )
 }

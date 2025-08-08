@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiser x Best Buy: Winning the Price Wars</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0046be;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(0, 70, 190, 0.98);
+            color: white;
+            padding: 30px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .partnership {
+            font-size: 24px;
+            opacity: 0.8;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0046be 0%, #003087 100%);
+            color: white;
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Challenge Cards */
+        .challenges {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #0046be;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .challenge-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .challenge-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #ff5252;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .challenge-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .challenge-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .challenge-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .challenge-quote {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #0046be;
+        }
+        
+        .challenge-impact {
+            color: #ff5252;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        /* Solution Section */
+        .solutions {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .solution-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,70,190,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .solution-card:hover::after {
+            opacity: 1;
+        }
+        
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: #0046be;
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .solution-title {
+            font-size: 24px;
+            color: #0046be;
+            margin-bottom: 15px;
+        }
+        
+        .solution-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .solution-features {
+            list-style: none;
+        }
+        
+        .solution-features li {
+            padding: 8px 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .solution-features li::before {
+            content: '✓';
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* ROI Calculator */
+        .roi-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .roi-calculator {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .roi-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .input-group input {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #0046be;
+        }
+        
+        .roi-results {
+            background: linear-gradient(135deg, #0046be 0%, #003087 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .roi-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .roi-value {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .roi-subtitle {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        /* Demo Section */
+        .demo-section {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .demo-preview {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        
+        .dashboard-mockup {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .dashboard-header {
+            background: #0046be;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dashboard-content {
+            padding: 30px;
+        }
+        
+        .competitor-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .competitor-table th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .competitor-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .price-alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0046be 0%, #003087 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: #fff200;
+            color: #0046be;
+        }
+        
+        .btn-primary:hover {
+            background: #e6db00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,242,0,0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #0046be;
+        }
+        
+        /* Interactive Elements */
+        .interactive-demo {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .demo-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .demo-btn {
+            padding: 10px 20px;
+            background: #0046be;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-btn:hover {
+            background: #003087;
+            transform: translateY(-2px);
+        }
+        
+        .demo-result {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .demo-result.active {
+            display: block;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .roi-value {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">WISER</div>
+                    <div class="partnership">×</div>
+                    <div class="logo">BEST BUY</div>
+                </div>
+                <div class="tagline">Winning the Price Wars Together</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Turn Pricing Pressure Into Competitive Advantage</h1>
+                <p class="hero-subtitle">While competitors stretch sales to 6 days and tariffs threaten margins,<br>Wiser gives Best Buy the intelligence to stay ahead</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="challenges">
+        <div class="container">
+            <h2 class="section-title">Your Pricing Challenges Are Real</h2>
+            <p class="section-subtitle">We've been listening to your earnings calls</p>
+            
+            <div class="challenge-grid">
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">💰</div>
+                    <h3 class="challenge-title">Price-Focused Consumers</h3>
+                    <p class="challenge-quote">"We're price competitive in an environment where consumers are very deal focused" - Corie Barry, Q3 2024</p>
+                    <p class="challenge-impact">Impact: Constant pressure to match competitors without eroding margins</p>
+                </div>
+                
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">📦</div>
+                    <h3 class="challenge-title">Tariff Uncertainty</h3>
+                    <p class="challenge-quote">"Price increases are highly likely... 55% from China, 20% from Mexico" - Q4 2025 Earnings</p>
+                    <p class="challenge-impact">Impact: Need to adjust prices strategically while remaining competitive</p>
+                </div>
+                
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">🏃</div>
+                    <h3 class="challenge-title">Extended Sales Wars</h3>
+                    <p class="challenge-quote">"Walmart's 6-day sales, Target Circle Week, Amazon's 4-day Prime Day"</p>
+                    <p class="challenge-impact">Impact: Matching 19 qualified competitors across multiple extended events</p>
+                </div>
+                
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">⏱️</div>
+                    <h3 class="challenge-title">Deal Event Timing</h3>
+                    <p class="challenge-quote">"Customers waiting for deals and sales events" - Q3 2025</p>
+                    <p class="challenge-impact">Impact: Need to predict and react to competitor promotions in real-time</p>
+                </div>
+                
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">📊</div>
+                    <h3 class="challenge-title">Margin Protection</h3>
+                    <p class="challenge-quote">"Maintaining operating income rate of 4.1-4.2%" - Matt Bilunas, CFO</p>
+                    <p class="challenge-impact">Impact: Balancing competitive pricing with profitability targets</p>
+                </div>
+                
+                <div class="challenge-card" onclick="highlightChallenge(this)">
+                    <div class="challenge-icon">🎯</div>
+                    <h3 class="challenge-title">Category Competition</h3>
+                    <p class="challenge-quote">"Some trade down in the television category" - Q3 2024</p>
+                    <p class="challenge-impact">Impact: Different pricing strategies needed across categories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container">
+            <h2 class="section-title">How Wiser Solves Your Pricing Challenges</h2>
+            <p class="section-subtitle">AI-powered intelligence designed for retail price wars</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🎯</div>
+                    <h3 class="solution-title">Real-Time Competitive Intelligence</h3>
+                    <p class="solution-description">Monitor all 19 qualified competitors plus key marketplace sellers 24/7</p>
+                    <ul class="solution-features">
+                        <li>Track Amazon, Walmart, Target pricing in real-time</li>
+                        <li>Alert on competitor price changes within minutes</li>
+                        <li>Monitor promotional calendars and flash sales</li>
+                        <li>Track marketplace seller pricing dynamics</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🤖</div>
+                    <h3 class="solution-title">AI-Powered Price Optimization</h3>
+                    <p class="solution-description">Protect margins while staying competitive on key SKUs</p>
+                    <ul class="solution-features">
+                        <li>Suggest optimal prices based on elasticity</li>
+                        <li>Identify products where you can price above competitors</li>
+                        <li>Flag margin-eroding price matches automatically</li>
+                        <li>Optimize by category (TVs, appliances, gaming)</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">📈</div>
+                    <h3 class="solution-title">Promotional Intelligence</h3>
+                    <p class="solution-description">Stay ahead of extended sales events and deal timing</p>
+                    <ul class="solution-features">
+                        <li>Predict competitor sales based on historical patterns</li>
+                        <li>Track promotional depth and frequency</li>
+                        <li>Identify promotional gaps to exploit</li>
+                        <li>Optimize your promotional calendar</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3 class="solution-title">Rapid Response System</h3>
+                    <p class="solution-description">React to market changes faster than ever</p>
+                    <ul class="solution-features">
+                        <li>Automated price change workflows</li>
+                        <li>Mobile alerts for critical price movements</li>
+                        <li>One-click price updates across channels</li>
+                        <li>Integration with your existing systems</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🌍</div>
+                    <h3 class="solution-title">Tariff Impact Analysis</h3>
+                    <p class="solution-description">Navigate cost increases while maintaining competitiveness</p>
+                    <ul class="solution-features">
+                        <li>Model tariff impacts on product costs</li>
+                        <li>Track competitor price increases by category</li>
+                        <li>Identify optimal timing for price adjustments</li>
+                        <li>Protect share in tariff-affected categories</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">📊</div>
+                    <h3 class="solution-title">Executive Dashboards</h3>
+                    <p class="solution-description">Give leadership the visibility they need</p>
+                    <ul class="solution-features">
+                        <li>Real-time competitive position by category</li>
+                        <li>Margin impact analysis and forecasting</li>
+                        <li>Share of competitive prices tracked</li>
+                        <li>Custom reports for earnings prep</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="demo-section">
+        <div class="container">
+            <h2 class="section-title">See Wiser In Action</h2>
+            <p class="section-subtitle">Experience how quickly you can respond to competitive threats</p>
+            
+            <div class="interactive-demo">
+                <div class="demo-controls">
+                    <button class="demo-btn" onclick="showDemo('amazon')">Amazon Drops TV Price</button>
+                    <button class="demo-btn" onclick="showDemo('walmart')">Walmart Launches 6-Day Sale</button>
+                    <button class="demo-btn" onclick="showDemo('target')">Target Undercuts Gaming</button>
+                    <button class="demo-btn" onclick="showDemo('tariff')">Tariff Impact Alert</button>
+                </div>
+                
+                <div id="amazon-demo" class="demo-result">
+                    <div class="price-alert">
+                        <span style="font-size: 24px;">⚠️</span>
+                        <div>
+                            <strong>ALERT: Amazon Price Drop Detected</strong><br>
+                            Samsung 65" QLED TV dropped from $1,299 to $999 (23% decrease)
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <strong>Wiser Recommendation:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Match price to $999 to maintain competitiveness</li>
+                            <li>Bundle with soundbar to protect margins (increases AOV by $249)</li>
+                            <li>Push promotional email to customers who viewed this SKU</li>
+                            <li>Estimated margin impact: -2.3% (offset by bundle attach rate)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="walmart-demo" class="demo-result">
+                    <div class="price-alert">
+                        <span style="font-size: 24px;">📅</span>
+                        <div>
+                            <strong>Walmart 6-Day Summer Sale Detected</strong><br>
+                            Major discounts across appliances, TVs, and smart home
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <strong>Wiser Strategic Response Plan:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Launch "Beat the Heat" counter-promotion (Days 3-6)</li>
+                            <li>Focus on exclusive SKUs where Walmart can't match</li>
+                            <li>Emphasize services (setup, warranty) for differentiation</li>
+                            <li>Predicted share protection: 94% with targeted response</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="target-demo" class="demo-result">
+                    <div class="price-alert">
+                        <span style="font-size: 24px;">🎮</span>
+                        <div>
+                            <strong>Target Gaming Price Attack</strong><br>
+                            PS5 bundles $50 below Best Buy across 5 configurations
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <strong>Wiser Gaming Category Defense:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Match base console price immediately</li>
+                            <li>Create exclusive Best Buy bundles with higher-margin accessories</li>
+                            <li>Activate Gamers Club member exclusive pricing</li>
+                            <li>Push trade-in promotions to reduce net price</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="tariff-demo" class="demo-result">
+                    <div class="price-alert" style="background: #f8d7da; border-color: #dc3545;">
+                        <span style="font-size: 24px;">🌍</span>
+                        <div>
+                            <strong>Tariff Impact Alert</strong><br>
+                            25% tariff on Chinese electronics effective next month
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <strong>Wiser Tariff Response Strategy:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Competitors raising prices: Amazon +18%, Walmart +15%</li>
+                            <li>Recommend: Increase prices by 16% to stay competitive</li>
+                            <li>Opportunity: Mexican-sourced alternatives 12% cheaper</li>
+                            <li>Customer messaging: "Locked-in pricing" for My Best Buy members</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-section">
+        <div class="container">
+            <h2 class="section-title">Calculate Your ROI</h2>
+            <p class="section-subtitle">See the impact on your bottom line</p>
+            
+            <div class="roi-calculator">
+                <div class="roi-inputs">
+                    <div class="input-group">
+                        <label>Annual Revenue ($B)</label>
+                        <input type="number" id="revenue" value="43.5" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label>Current Operating Margin (%)</label>
+                        <input type="number" id="margin" value="4.1" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label>% of Revenue Price-Sensitive</label>
+                        <input type="number" id="sensitive" value="60" step="1">
+                    </div>
+                    <div class="input-group">
+                        <label>Avg Response Time to Competitors (hours)</label>
+                        <input type="number" id="response" value="24" step="1">
+                    </div>
+                </div>
+                
+                <div class="roi-results">
+                    <div class="roi-title">Estimated Annual Impact with Wiser</div>
+                    <div class="roi-value" id="roi-value">$261M</div>
+                    <div class="roi-subtitle">Additional operating income through optimized pricing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Win the Pricing Wars?</h2>
+            <p class="cta-subtitle">Join retailers who've increased margins by 2-5% with Wiser</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" onclick="scheduleDemo()">Schedule Your Demo</a>
+                <a href="#" class="btn btn-secondary" onclick="downloadCase()">Download Case Study</a>
+            </div>
+            
+            <div style="margin-top: 40px; opacity: 0.8;">
+                <p>🏆 Trusted by 500+ retailers | 📊 50B+ prices tracked daily | ⚡ 5-minute setup</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Interactive Demo Functions
+        function showDemo(type) {
+            // Hide all demos
+            document.querySelectorAll('.demo-result').forEach(demo => {
+                demo.classList.remove('active');
+            });
+            
+            // Show selected demo
+            setTimeout(() => {
+                document.getElementById(type + '-demo').classList.add('active');
+            }, 100);
+        }
+        
+        // Challenge Card Interaction
+        function highlightChallenge(card) {
+            // Remove highlight from all cards
+            document.querySelectorAll('.challenge-card').forEach(c => {
+                c.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+            });
+            
+            // Highlight selected card
+            card.style.boxShadow = '0 8px 40px rgba(0,70,190,0.2)';
+        }
+        
+        // ROI Calculator
+        function calculateROI() {
+            const revenue = parseFloat(document.getElementById('revenue').value) || 43.5;
+            const margin = parseFloat(document.getElementById('margin').value) || 4.1;
+            const sensitive = parseFloat(document.getElementById('sensitive').value) || 60;
+            const response = parseFloat(document.getElementById('response').value) || 24;
+            
+            // Calculation based on:
+            // - 1% margin improvement on price-sensitive revenue
+            // - Additional gains from faster response time
+            const sensitiveRevenue = revenue * (sensitive / 100);
+            const marginImprovement = 0.01; // 1% improvement
+            const responseMultiplier = Math.min(response / 4, 3); // Faster response = higher multiplier
+            
+            const impact = sensitiveRevenue * marginImprovement * responseMultiplier * 1000; // Convert to millions
+            
+            document.getElementById('roi-value').textContent = '$' + Math.round(impact) + 'M';
+        }
+        
+        // Add event listeners to ROI inputs
+        document.querySelectorAll('.roi-calculator input').forEach(input => {
+            input.addEventListener('input', calculateROI);
+        });
+        
+        // CTA Functions
+        function scheduleDemo() {
+            alert('Demo scheduling would open here - connecting to Wiser\'s calendar system');
+        }
+        
+        function downloadCase() {
+            alert('Case study download would start - featuring similar retailers\' success stories');
+        }
+        
+        // Initial calculation
+        calculateROI();
+        
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
