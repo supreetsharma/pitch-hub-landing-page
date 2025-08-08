@@ -5,30 +5,14 @@ import { Crown } from 'lucide-react' // Import Crown component
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 import { AnimatedSection } from "@/components/animated-section"
 import { CheckCircle, ArrowRight, Zap, Palette, Upload, Eye, TrendingUp, FileText, User, Users, Play, Link, Flame, BarChart3, Target, Briefcase } from 'lucide-react'
-import { StarBorder } from "@/components/ui/star-border"
-
-interface LeadData {
-  name: string
-  email: string
-  company: string
-}
 
 export default function PitchHubLanding() {
-  const [leadData, setLeadData] = useState<LeadData>({
-    name: "",
-    email: "",
-    company: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showSuccess, setShowSuccess] = useState(false)
   const [dynamicText, setDynamicText] = useState("qualify")
   const [textKey, setTextKey] = useState(0)
-  const [formError, setFormError] = useState("")
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const totalSlides = 5
@@ -53,39 +37,6 @@ export default function PitchHubLanding() {
 
     return () => clearInterval(interval)
   }, [])
-
-  const handleLeadSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormError("")
-
-    // Validation: Company is required, and either name or email must be provided
-    if (!leadData.company.trim()) {
-      setFormError("Company name is required")
-      return
-    }
-
-    if (!leadData.name.trim() && !leadData.email.trim()) {
-      setFormError("Please provide either a name or email address")
-      return
-    }
-
-    // Email validation if provided
-    if (leadData.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(leadData.email)) {
-      setFormError("Please enter a valid email address")
-      return
-    }
-
-    setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setShowSuccess(true)
-
-    setTimeout(() => {
-      setShowSuccess(false)
-      setLeadData({ name: "", email: "", company: "" })
-      setFormError("")
-    }, 3000)
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -135,108 +86,24 @@ export default function PitchHubLanding() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-3.5">
-                <span className="block font-semibold text-gray-900 mb-2">
-                  Make Personalization Your #1 Revenue Channel.
-                </span>
-                We'll do automated lead enrichment and pull winning proof points from your decks, case studies, and blog
-                posts to build a compelling narrative for each lead.
-              </p>
+              <h2 className="text-2xl lg:text-3xl text-gray-900 font-semibold mb-2">
+                Make Personalization Your #{'1'} Revenue Channel
+              </h2>
             </AnimatedSection>
 
             {/* Lead Capture Form - Centered */}
-            <AnimatedSection animation="scale" delay={400}>
-              <div className="max-w-md mx-auto mb-12">
-                <Card className="border-0 shadow-2xl bg-white">
-                  <CardHeader className="text-center pb-6">
-                    <CardTitle className="text-2xl text-gray-900 font-semibold">Create your first pitch</CardTitle>
-                    <p className="text-gray-600">Enter your prospect's details to get started</p>
-                  </CardHeader>
-                  <CardContent className="px-8 pb-8">
-                    {showSuccess ? (
-                      <div className="text-center py-8">
-                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                          <CheckCircle className="w-8 h-8 text-green-600" />
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Pitch created!</h3>
-                        <p className="text-gray-600 mb-6">Check your email for the link and sharing instructions.</p>
-                        <Button
-                          onClick={() => setShowSuccess(false)}
-                          className="bg-black hover:bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
-                        >
-                          Create another
-                        </Button>
-                      </div>
-                    ) : (
-                      <form onSubmit={handleLeadSubmit} className="space-y-5">
-                        {/* Error message display */}
-                        {formError && (
-                          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center">
-                                <span className="text-white text-xs">!</span>
-                              </div>
-                              <p className="text-red-700 text-sm font-medium">{formError}</p>
-                            </div>
-                          </div>
-                        )}
-
-                        <div>
-                          <Input
-                            id="name"
-                            value={leadData.name}
-                            onChange={(e) => setLeadData({ ...leadData, name: e.target.value })}
-                            className="border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12"
-                            placeholder="Lead's name (optional)"
-                          />
-                        </div>
-
-                        <div>
-                          <Input
-                            id="email"
-                            type="email"
-                            value={leadData.email}
-                            onChange={(e) => setLeadData({ ...leadData, email: e.target.value })}
-                            className="border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12"
-                            placeholder="Lead's email address (optional)"
-                          />
-                        </div>
-
-                        <div>
-                          <Input
-                            id="company"
-                            value={leadData.company}
-                            onChange={(e) => setLeadData({ ...leadData, company: e.target.value })}
-                            className="border-gray-200 focus:border-blue-500 focus:ring-blue-500 h-12"
-                            placeholder="Lead's company name"
-                          />
-                        </div>
-
-                        <StarBorder
-                          type="submit"
-                          disabled={isSubmitting}
-                          className="w-full transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-80"
-                          color="hsl(220, 100%, 50%)"
-                          speed="4s"
-                        >
-                          <div className="bg-black text-white py-4 px-6 rounded-lg font-semibold text-lg w-full flex items-center justify-center">
-                            {isSubmitting ? (
-                              <>
-                                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                                Creating pitch...
-                              </>
-                            ) : (
-                              <>
-                                Create My Pitch for Free
-                                <ArrowRight className="ml-2 h-4 w-4" />
-                              </>
-                            )}
-                          </div>
-                        </StarBorder>
-                      </form>
-                    )}
-                  </CardContent>
-                </Card>
+            <AnimatedSection animation="scale" delay={300}>
+              <div className="flex flex-col items-center gap-3">
+                <Button
+                  size="lg"
+                  className="bg-black hover:bg-gray-900 text-white text-lg px-8 py-6 rounded-xl"
+                >
+                  Generate Your First Winning Pitch
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <p className="text-sm text-gray-500">
+                  Free. AI-powered. Takes 60 seconds.
+                </p>
               </div>
             </AnimatedSection>
           </div>
