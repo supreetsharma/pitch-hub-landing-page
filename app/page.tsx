@@ -525,156 +525,109 @@ export default function PitchHubLanding() {
                   >
                     {/* Wiser → Best Buy Demo */}
                     <div
-                      className="group relative cursor-pointer transition-all duration-300 hover:scale-105 flex-shrink-0"
+                      className="group relative cursor-pointer transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                       onClick={() => window.open("/demo/wiser-bestbuy.html", "_blank")}
                     >
-                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 w-80 h-32 flex items-center justify-center">
-                        <div className="flex items-center space-x-4">
-                          <div className="relative">
-                            <img
-                              src="/images/wiser-logo.png"
-                              alt="Wiser"
-                              className="h-6 w-auto transition-all duration-300 group-hover:brightness-110"
-                            />
+                      <Card className="w-80 h-32 rounded-lg border border-gray-200 shadow-sm">
+                        <CardContent className="h-full p-6 flex items-center justify-center">
+                          <div className="flex items-center space-x-4">
+                            <img src="/images/wiser-logo.png" alt="Wiser" className="h-6 w-auto" />
+                            <ArrowRight className="w-5 h-5 text-gray-400" />
+                            <img src="/images/bestbuy-logo.png" alt="Best Buy" className="h-6 w-auto" />
                           </div>
-                          <div className="text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
-                            <ArrowRight className="w-5 h-5" />
-                          </div>
-                          <div className="relative">
-                            <img
-                              src="/images/bestbuy-logo.png"
-                              alt="Best Buy"
-                              className="h-6 w-auto transition-all duration-300 group-hover:brightness-110"
-                            />
-                          </div>
-                        </div>
-                        <div className="absolute inset-0 bg-blue-500 bg-opacity-0 group-hover:bg-opacity-5 rounded-xl transition-all duration-300"></div>
-                      </div>
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap z-10">
-                        Pricing Intelligence Platform Demo
-                        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+                        </CardContent>
+                      </Card>
+                      <div className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View demo</span>
                       </div>
                     </div>
 
                     {/* Apollo → LaunchDarkly Demo */}
                     <div
-                      className="group relative cursor-pointer transition-all duration-300 hover:scale-105 flex-shrink-0"
+                      className="group relative cursor-pointer transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                       onClick={() => window.open("/demo/apollo-launchdarkly.html", "_blank")}
                     >
-                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200 w-80 h-32 flex items-center justify-center">
-                        <div className="flex items-center space-x-4">
-                          <div className="relative">
-                            <img
-                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg"
-                              alt="Apollo"
-                              className="h-6 w-auto transition-all duration-300 group-hover:brightness-110"
-                            />
+                      <Card className="w-80 h-32 rounded-lg border border-gray-200 shadow-sm">
+                        <CardContent className="h-full p-6 flex items-center justify-center">
+                          <div className="flex items-center space-x-4">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg" alt="Apollo" className="h-6 w-auto" />
+                            <ArrowRight className="w-5 h-5 text-gray-400" />
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif" alt="LaunchDarkly" className="h-6 w-auto" />
                           </div>
-                          <div className="text-gray-400 group-hover:text-purple-500 transition-colors duration-300">
-                            <ArrowRight className="w-5 h-5" />
-                          </div>
-                          <div className="relative">
-                            <img
-                              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif"
-                              alt="LaunchDarkly"
-                              className="h-6 w-auto transition-all duration-300 group-hover:brightness-110"
-                            />
-                          </div>
-                        </div>
-                        <div className="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-5 rounded-xl transition-all duration-300"></div>
-                      </div>
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap z-10">
-                        Feature Flag Management Demo
-                        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+                        </CardContent>
+                      </Card>
+                      <div className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View demo</span>
                       </div>
                     </div>
 
                     {/* Fathom → Zendesk Demo */}
                     <div
-                      className="group relative cursor-pointer transition-all duration-300 hover:scale-105 flex-shrink-0"
+                      className="group relative cursor-pointer transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                       onClick={() => window.open("/demo/fathom-zendesk.html", "_blank")}
                     >
-                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 w-80 h-32 flex items-center justify-center">
-                        <div className="flex items-center space-x-4">
-                          <div className="relative">
+                      <Card className="w-80 h-32 rounded-lg border border-gray-200 shadow-sm">
+                        <CardContent className="h-full p-6 flex items-center justify-center">
+                          <div className="flex items-center space-x-4">
                             <div className="flex items-center space-x-2">
                               <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
                                 <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
                               </div>
                               <span className="font-bold text-gray-900 text-sm">FATHOM</span>
                             </div>
-                          </div>
-                          <div className="text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
-                            <ArrowRight className="w-5 h-5" />
-                          </div>
-                          <div className="relative">
+                            <ArrowRight className="w-5 h-5 text-gray-400" />
                             <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
                               <span className="text-white font-bold text-xs">ZENDESK</span>
                             </div>
                           </div>
-                        </div>
-                        <div className="absolute inset-0 bg-blue-500 bg-opacity-0 group-hover:bg-opacity-5 rounded-xl transition-all duration-300"></div>
-                      </div>
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap z-10">
-                        AI Meeting Notes for Support Demo
-                        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+                        </CardContent>
+                      </Card>
+                      <div className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View demo</span>
                       </div>
                     </div>
 
                     {/* Linear → GitLab Demo */}
                     <div
-                      className="group relative cursor-pointer transition-all duration-300 hover:scale-105 flex-shrink-0"
+                      className="group relative cursor-pointer transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                       onClick={() => window.open("/demo/linear-gitlab.html", "_blank")}
                     >
-                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200 w-80 h-32 flex items-center justify-center">
-                        <div className="flex items-center space-x-4">
-                          <div className="relative">
+                      <Card className="w-80 h-32 rounded-lg border border-gray-200 shadow-sm">
+                        <CardContent className="h-full p-6 flex items-center justify-center">
+                          <div className="flex items-center space-x-4">
                             <div className="flex items-center space-x-2">
                               <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
                                 <div className="w-2 h-2 border border-white transform rotate-45"></div>
                               </div>
                               <span className="font-bold text-gray-900 text-sm">Linear</span>
                             </div>
-                          </div>
-                          <div className="text-gray-400 group-hover:text-purple-500 transition-colors duration-300">
-                            <ArrowRight className="w-5 h-5" />
-                          </div>
-                          <div className="relative">
+                            <ArrowRight className="w-5 h-5 text-gray-400" />
                             <div className="flex items-center space-x-2">
                               <div className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
-                                <div
-                                  className="w-2 h-2 bg-white"
-                                  style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
-                                ></div>
+                                <div className="w-2 h-2 bg-white" style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}></div>
                               </div>
                               <span className="font-bold text-gray-900 text-sm">GitLab</span>
                             </div>
                           </div>
-                        </div>
-                        <div className="absolute inset-0 bg-purple-500 bg-opacity-0 group-hover:bg-opacity-5 rounded-xl transition-all duration-300"></div>
-                      </div>
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap z-10">
-                        Issue Tracking Integration Demo
-                        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+                        </CardContent>
+                      </Card>
+                      <div className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View demo</span>
                       </div>
                     </div>
 
                     {/* Gong → Snowflake Demo */}
                     <div
-                      className="group relative cursor-pointer transition-all duration-300 hover:scale-105 flex-shrink-0"
+                      className="group relative cursor-pointer transition-transform duration-300 hover:scale-[1.03] flex-shrink-0"
                       onClick={() => window.open("/demo/gong-snowflake.html", "_blank")}
                     >
-                      <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 w-80 h-32 flex items-center justify-center">
-                        <div className="flex items-center space-x-4">
-                          <div className="relative">
+                      <Card className="w-80 h-32 rounded-lg border border-gray-200 shadow-sm">
+                        <CardContent className="h-full p-6 flex items-center justify-center">
+                          <div className="flex items-center space-x-4">
                             <div className="w-12 h-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded flex items-center justify-center">
                               <span className="text-white font-bold text-xs">GONG</span>
                             </div>
-                          </div>
-                          <div className="text-gray-400 group-hover:text-blue-500 transition-colors duration-300">
-                            <ArrowRight className="w-5 h-5" />
-                          </div>
-                          <div className="relative">
+                            <ArrowRight className="w-5 h-5 text-gray-400" />
                             <div className="flex items-center space-x-2">
                               <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
                                 <div className="text-white text-xs">❄</div>
@@ -682,12 +635,10 @@ export default function PitchHubLanding() {
                               <span className="font-bold text-gray-900 text-sm">Snowflake</span>
                             </div>
                           </div>
-                        </div>
-                        <div className="absolute inset-0 bg-blue-500 bg-opacity-0 group-hover:bg-opacity-5 rounded-xl transition-all duration-300"></div>
-                      </div>
-                      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap z-10">
-                        Sales Analytics Platform Demo
-                        <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+                        </CardContent>
+                      </Card>
+                      <div className="pointer-events-none absolute inset-0 rounded-lg bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">View demo</span>
                       </div>
                     </div>
 
@@ -889,153 +840,96 @@ export default function PitchHubLanding() {
       </AnimatedSection>
 
       {/* Pricing Section */}
-<AnimatedSection animation="fade-up">
-  <section id="pricing" className="py-20 px-6 bg-gray-50">
-    <div className="container mx-auto max-w-6xl">
-      <div className="text-center mb-16">
-        <AnimatedSection animation="fade-up">
-          <h2 className="text-4xl lg:text-5xl text-gray-900 mb-6 font-semibold">Simple, transparent pricing</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to turn leads into pipeline. No hidden fees, no seat limits.
-          </p>
-        </AnimatedSection>
-      </div>
+      <AnimatedSection animation="fade-up">
+        <section id="pricing" className="py-20 px-6 bg-white">
+          <div className="container mx-auto max-w-7xl">
+            {/* Pricing header removed per design */}
 
-      <div className="flex justify-center mb-16">
-        <AnimatedSection animation="scale" delay={100}>
-          <Card className="border-2 border-blue-500 relative max-w-5xl w-full bg-white rounded-2xl overflow-hidden">
-            <div className="absolute -top-4 left-8">
-              <Badge className="bg-blue-500 text-white px-6 py-2 text-sm font-semibold">Limited Time</Badge>
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection animation="fade-up" delay={100}>
+                <Card className="border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8">
+                      {/* Left Section - Pricing and CTA */}
+                      <div className="space-y-6">
+                        <div className="flex items-start justify-between">
+                          <h3 className="text-3xl font-bold text-gray-900">All in One</h3>
+                          <Badge className="bg-gray-100 text-gray-700 px-3 py-1 text-sm font-medium">
+                            to power you revenue ambitions
+                          </Badge>
+                        </div>
+                        
+                        <div className="flex items-baseline space-x-3">
+                          <div className="text-4xl font-bold text-gray-900">$99</div>
+                          <div className="text-lg text-gray-400 line-through">$200 /monthly</div>
+                        </div>
+                        
+                        <Button className="w-full bg-black hover:bg-gray-900 text-white py-3 text-lg font-medium">
+                          Get Started for Free
+                          <ArrowRight className="w-5 h-5 ml-2" />
+                        </Button>
+                        
+                        <p className="text-sm text-gray-700">Cancel anytime. No questions asked!</p>
+                      </div>
+                      
+                      {/* Right Section - Features */}
+                      <div className="space-y-4">
+                        <h4 className="text-lg font-bold text-gray-900">What's included:</h4>
+                        <div className="grid grid-cols-1 gap-3">
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">30 Articles a month generated and published on auto-pilot</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Auto Keyword Research made for you hands-free</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">High DR Backlinks built for you on auto-pilot through our <span className="text-blue-600">Backlink Exchange</span></span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Relevant YouTube videos integrated into articles</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Unlimited AI Rewrites</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Unlimited Users in your Organization</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Integrates with WordPress, Webflow, Shopify, Framer and many <span className="text-blue-600">other platforms</span></span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">AI Images generated in different styles</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Articles generated in 150+ languages</span>
+                          </div>
+                          <div className="flex items-start space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-700">Custom Features requests</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
             </div>
-            <CardContent className="p-0">
-              <div className="grid lg:grid-cols-3 gap-0">
-                {/* Left Column - Pricing */}
-                <div className="p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-purple-50">
-                  <div className="text-center lg:text-left">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">All in One</h3>
-                    <p className="text-gray-600 mb-8">For ambitious sales teams</p>
-                    
-                    <div className="mb-8">
-                      <div className="flex items-baseline justify-center lg:justify-start space-x-2">
-                        <span className="text-6xl font-bold text-gray-900">$20</span>
-                        <span className="text-2xl text-gray-400 line-through">$50</span>
-                        <span className="text-gray-600">/monthly</span>
-                      </div>
-                    </div>
 
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold rounded-xl mb-6">
-                      Get Started for Free →
-                    </Button>
-                    
-                    <div className="text-center lg:text-left">
-                      <span className="font-semibold text-gray-900">Cancel anytime.</span>
-                      <span className="text-gray-600"> No questions asked!</span>
-                    </div>
-                  </div>
-                </div>
+            {/* Trial and contact text removed per design */}
 
-                {/* Middle Column - Core Features */}
-                <div className="p-8 lg:p-12 border-l border-r border-gray-100">
-                  <h4 className="text-xl font-bold text-gray-900 mb-6">What's included:</h4>
-                  <ul className="space-y-4">
-                    <li className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">Unlimited Personalized Pitches</span>
-                        <span className="text-gray-600"> generated and published on auto-pilot</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">Auto Lead Enrichment</span>
-                        <span className="text-gray-600"> made for you hands-free</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">Smart Analytics</span>
-                        <span className="text-gray-600"> built for you on auto-pilot through our </span> 
-                        <span className="text-blue-600 underline">Intent Scoring</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-blue-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">Real-time Notifications</span>
-                        <span className="text-gray-600"> integrated into your workflow</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-blue-600" />
-                      </div>
-                      <span className="text-gray-900">Unlimited AI Content Generation</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Right Column - Advanced Features */}
-                <div className="p-8 lg:p-12">
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-purple-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">Unlimited Users</span>
-                        <span className="text-gray-600"> in your Organization</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-purple-600" />
-                      </div>
-                      <div>
-                        <span className="text-gray-900">Integrates with HubSpot, Salesforce, Slack and many </span> 
-                        <span className="text-purple-600 underline">other platforms</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-purple-600" />
-                      </div>
-                      <div>
-                        <span className="font-semibold text-gray-900">AI Brand Assets</span>
-                        <span className="text-gray-600"> generated in different styles</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-purple-600" />
-                      </div>
-                      <span className="text-gray-900">Pitches generated for 150+ industries</span>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                        <CheckCircle className="w-3 h-3 text-purple-600" />
-                      </div>
-                      <span className="text-gray-900">Custom Features requests</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </AnimatedSection>
-      </div>
-    </div>
-  </section>
-</AnimatedSection>
+            {/* FAQ removed per design */}
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* Customer Testimonials */}
       {/*
