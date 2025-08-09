@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="planeGradient" x1="50" y1="50" x2="150" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Light background to match page cards -->
+  <rect width="200" height="200" rx="30" fill="#F8FAFF"/>
+  <!-- Paper airplane shape with page gradient -->
+  <path d="M50 75 L 150 50 L 100 150 L 85 115 Z" fill="url(#planeGradient)"/>
+  <path d="M50 75 L 100 150 L 100 90 Z" fill="#7C3AED"/>
+</svg>
+

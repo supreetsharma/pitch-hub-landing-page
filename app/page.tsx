@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { AnimatedSection } from "@/components/animated-section"
 import { CheckCircle, ArrowRight, Zap, Palette, Upload, Eye, TrendingUp, FileText, User, Users, Play, Link, Flame, BarChart3, Target, Briefcase } from 'lucide-react'
 
-export default function PitchHubLanding() {
+export default function PitchFabricLanding() {
   const [dynamicText, setDynamicText] = useState("qualify")
   const [textKey, setTextKey] = useState(0)
 
@@ -45,10 +45,10 @@ export default function PitchHubLanding() {
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
+            <div className="w-8 h-8 rounded-lg overflow-hidden">
+              <img src="/logo.svg" alt="PitchFabric" className="w-8 h-8" />
             </div>
-            <span className="text-xl font-bold text-gray-900">PitchHub</span>
+            <span className="text-xl font-bold text-gray-900">PitchFabric</span>
           </div>
           <div className="flex items-center space-x-4">
             <Button variant="ghost" className="text-gray-600 hover:text-gray-900">
@@ -64,7 +64,7 @@ export default function PitchHubLanding() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <AnimatedSection animation="fade-up">
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight mb-8">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-8">
                 <div className="mb-2 font-semibold">
                   Go to market with{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -102,7 +102,7 @@ export default function PitchHubLanding() {
                 >
                   <Button
                     size="lg"
-                    className="group bg-black hover:bg-gray-900 text-white text-lg px-8 py-6 rounded-xl"
+                    className="group bg-black hover:bg-gray-900 text-white text-[1.25rem] leading-7 px-9 py-7 rounded-xl"
                   >
                     Generate Your First Winning Pitch
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1.5" />
@@ -116,6 +116,84 @@ export default function PitchHubLanding() {
           </div>
         </div>
       </section>
+
+      {/* Problem → Solution Section */}
+      <AnimatedSection animation="fade-up">
+        <section className="px-6 bg-white py-6">
+          <div className="container mx-auto max-w-7xl">
+            <div className="relative text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900">Your problem</h2>
+              <h3 className="text-4xl lg:text-5xl font-semibold text-gray-900 mt-1">Our solution</h3>
+              <img src="/svgs/curved-arrow-left.svg" alt="arrow left" className="hidden md:block absolute left-8 top-12 w-16 md:w-20" />
+              <img src="/svgs/curved-arrow-right.svg" alt="arrow right" className="hidden md:block absolute right-8 top-12 w-16 md:w-20" />
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+              {/* Left: Problems */}
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Reps spend hours <span className="font-semibold text-gray-900">copy‑pasting decks, PDFs and blog snippets</span> for each prospect and still ship off‑brand pitches.
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Personalization stalls pipeline—<span className="text-red-500 font-semibold">context lives across tools</span> (docs, case studies, slides), so follow‑ups are slow and generic.
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Marketing’s best proof points <span className="font-semibold text-gray-900">don’t make it into outreach</span>—so buyers don’t see the story that actually converts.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Solution card */}
+              <div>
+                <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <img src="/logo.svg" alt="PitchFabric" className="w-10 h-10 rounded-lg" />
+                    <span className="text-2xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">PitchFabric</span>
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Ship on-brand, personalized microsites in seconds</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                      </div>
+                      <span className="text-gray-800">Auto‑ingest decks, PDFs, and blog posts</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                      </div>
+                      <span className="text-gray-800">AI builds a <span className="font-semibold">brand‑perfect</span> narrative for each lead</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                      </div>
+                      <span className="text-gray-800">One smart link—interactive, trackable, <span className="font-semibold">always on‑brand</span></span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                      </div>
+                      <span className="text-gray-800">Engagement analytics + intent scoring in your CRM</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                        <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                      </div>
+                      <span className="text-gray-800">HubSpot & Salesforce integrations (coming soon)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       {/* Feature Section 2 - Purple Card */}
       <AnimatedSection animation="fade-up">
@@ -385,7 +463,7 @@ export default function PitchHubLanding() {
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <AnimatedSection animation="fade-up">
-                <h2 className="text-4xl lg:text-5xl text-gray-900 mb-6 font-semibold">See PitchHub in Action</h2>
+                <h2 className="text-4xl lg:text-5xl text-gray-900 mb-6 font-semibold">See PitchFabric in Action</h2>
               </AnimatedSection>
 
               {/* Horizontal Scrolling Logo Demo */}
@@ -607,6 +685,89 @@ export default function PitchHubLanding() {
         </section>
       </AnimatedSection>
 
+      {/* Problem → Solution Section */}
+      <AnimatedSection animation="fade-up">
+        <section className="px-6 bg-white py-6">
+          <div className="container mx-auto max-w-7xl">
+            <div className="relative text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900">Your problem</h2>
+              <h3 className="text-3xl lg:text-4xl font-semibold text-gray-900 mt-1">Our solution</h3>
+              <img src="/svgs/curved-arrow-left.svg" alt="arrow left" className="hidden md:block absolute left-10 -top-6 w-24" />
+              <img src="/svgs/curved-arrow-right.svg" alt="arrow right" className="hidden md:block absolute right-10 -top-6 w-24" />
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+              {/* Left: Problems */}
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Monthly subscriptions for <span className="font-semibold text-gray-900">SEO tools</span> eat up
+                    <span className="text-red-500 font-semibold"> $500+ of marketing budget</span>.
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Switching between tools means <span className="text-red-500 font-semibold">losing time and efficiency</span>.
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-6 text-left">
+                  <p className="text-gray-700">
+                    Hours spent learning tools instead of <span className="font-semibold text-gray-900">growing business</span>.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right: Solution card */}
+              <div>
+                <div className="bg-white rounded-2xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4">
+                  <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-1">
+                    <div className="bg-white rounded-2xl p-6">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <img src="/logo.svg" alt="PitchFabric" className="w-8 h-8 rounded-lg" />
+                        <span className="text-white/90 font-semibold"></span>
+                      </div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">Replace multiple tools with one platform</h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                          </div>
+                          <span className="text-gray-800">Keyword Searching</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                          </div>
+                          <span className="text-gray-800">Content Generation</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                          </div>
+                          <span className="text-gray-800">Content Optimization</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                          </div>
+                          <span className="text-gray-800">Images</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
+                            <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
+                          </div>
+                          <span className="text-gray-800">Localization</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
       {/* Who This Is For Section */}
       <AnimatedSection animation="fade-up">
         <section id="customers" className="py-20 px-6 bg-white">
@@ -679,7 +840,7 @@ export default function PitchHubLanding() {
                   <CardContent className="p-8">
                     <h3 className="text-2xl text-gray-900 mb-4 font-semibold">Mid-Market Sales Leaders</h3>
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                      PitchHub kills "personalization tax," auto-building brand-perfect pitches so the team works
+                      PitchFabric kills "personalization tax," auto-building brand-perfect pitches so the team works
                       pipeline, not PowerPoint.
                     </p>
                     <div className="space-y-4">
@@ -893,10 +1054,8 @@ export default function PitchHubLanding() {
             <div className="text-center space-y-6">
               <AnimatedSection animation="fade-up" delay={100}>
                 <div className="flex items-center justify-center space-x-3 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">P</span>
-                  </div>
-                  <span className="text-xl font-bold text-gray-900">PitchHub</span>
+                  <img src="/logo.svg" alt="PitchFabric" className="w-8 h-8 rounded-lg" />
+                  <span className="text-xl font-bold text-gray-900">PitchFabric</span>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto">
                   Transform leads into personalized microsites in under 3 minutes.
@@ -915,7 +1074,7 @@ export default function PitchHubLanding() {
               </AnimatedSection>
 
               <AnimatedSection animation="fade-up" delay={300}>
-                <div className="text-sm text-gray-500">Copyright © 2025 PitchHub. All rights reserved.</div>
+                <div className="text-sm text-gray-500">Copyright © 2025 PitchFabric. All rights reserved.</div>
               </AnimatedSection>
             </div>
           </div>

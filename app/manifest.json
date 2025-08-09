@@ -1,0 +1,16 @@
+{
+  "name": "PitchFabric",
+  "short_name": "PitchFabric",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#2563EB",
+  "background_color": "#2563EB",
+  "display": "standalone"
+}
+

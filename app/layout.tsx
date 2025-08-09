@@ -6,10 +6,15 @@ import "./globals.css"
 const openSans = Open_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "PitchHub - Personalized Microsites for Sales",
+  title: "PitchFabric - Personalized Microsites for Sales",
   description:
     "Transform leads into personalized microsites in under 3 minutes. Make personalization your #1 revenue channel.",
-    generator: 'v0.dev'
+    generator: 'v0.dev',
+    icons: {
+      icon: "/icon.svg",
+      shortcut: "/icon.svg",
+      apple: "/icon.svg"
+    },
 }
 
 export default function RootLayout({

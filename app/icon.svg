@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PitchFabric icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Inverted colors: primary gradient background, neutral (white) icon -->
+  <rect width="200" height="200" rx="36" fill="url(#bg)"/>
+  <!-- Paper airplane mark (same geometry as logo, neutral fill) -->
+  <path d="M50 75 L150 50 L100 150 L85 115 Z" fill="#FFFFFF"/>
+  <path d="M50 75 L100 150 L100 90 Z" fill="#F1F5F9"/>
+</svg>
+
