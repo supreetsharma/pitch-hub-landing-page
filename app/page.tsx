@@ -5,6 +5,7 @@ import { Crown } from 'lucide-react' // Import Crown component
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedSection } from "@/components/animated-section"
@@ -68,8 +69,8 @@ export default function PitchHubLanding() {
                   Go to market with{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     a personalized pitch
-                  </span>
-                  —and the ability to
+                  </span>{" "}
+                  and the ability to
                 </div>
                 <div
                   className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-500 h-[1.2em] flex items-center justify-center"
@@ -94,13 +95,19 @@ export default function PitchHubLanding() {
             {/* Lead Capture Form - Centered */}
             <AnimatedSection animation="scale" delay={300}>
               <div className="flex flex-col items-center gap-3">
-                <Button
-                  size="lg"
-                  className="bg-black hover:bg-gray-900 text-white text-lg px-8 py-6 rounded-xl"
+                <motion.div
+                  whileHover={{ y: -2, scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 24 }}
                 >
-                  Generate Your First Winning Pitch
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                  <Button
+                    size="lg"
+                    className="group bg-black hover:bg-gray-900 text-white text-lg px-8 py-6 rounded-xl"
+                  >
+                    Generate Your First Winning Pitch
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1.5" />
+                  </Button>
+                </motion.div>
                 <p className="text-sm text-gray-500">
                   Free. AI-powered. Takes 60 seconds.
                 </p>
@@ -375,7 +382,7 @@ export default function PitchHubLanding() {
       {/* Demo Section */}
       <AnimatedSection animation="fade-up">
         <section className="py-20 px-6 bg-transparent">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <AnimatedSection animation="fade-up">
                 <h2 className="text-4xl lg:text-5xl text-gray-900 mb-6 font-semibold">See PitchHub in Action</h2>
@@ -603,7 +610,7 @@ export default function PitchHubLanding() {
       {/* Who This Is For Section */}
       <AnimatedSection animation="fade-up">
         <section id="customers" className="py-20 px-6 bg-white">
-          <div className="container mx-auto max-w-6xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <AnimatedSection animation="fade-up">
                 <h2 className="text-4xl lg:text-5xl text-gray-900 mb-6 font-semibold">
@@ -612,14 +619,11 @@ export default function PitchHubLanding() {
               </AnimatedSection>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-7 lg:gap-10">
               {/* Card 1 - Founders & Solo Marketers */}
               <AnimatedSection animation="fade-up" delay={100}>
-                <Card className="border-0 transition-all duration-300 h-full bg-white">
+                <Card className="h-full bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
-                      <Crown className="w-8 h-8 text-gray-600" />
-                    </div>
                     <h3 className="text-2xl text-gray-900 mb-4 font-semibold">Founder-Sellers & Solo Marketers</h3>
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                       Look enterprise-grade without the headcount. One click to help you sell while focus on building
@@ -645,11 +649,8 @@ export default function PitchHubLanding() {
 
               {/* Card 2 - Agencies */}
               <AnimatedSection animation="fade-up" delay={200}>
-                <Card className="border-0 transition-all duration-300 h-full bg-white">
+                <Card className="h-full bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
-                      <Briefcase className="w-8 h-8 text-gray-600" />
-                    </div>
                     <h3 className="text-2xl text-gray-900 mb-4 font-semibold">Demand-Generation Agencies</h3>
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                       Prove your value deeper in the funnel and make yourself indispensable to your clients.
@@ -674,11 +675,8 @@ export default function PitchHubLanding() {
 
               {/* Card 3 - Sales Leaders */}
               <AnimatedSection animation="fade-up" delay={300}>
-                <Card className="border-0 transition-all duration-300 h-full bg-white">
+                <Card className="h-full bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
-                      <Target className="w-8 h-8 text-gray-600" />
-                    </div>
                     <h3 className="text-2xl text-gray-900 mb-4 font-semibold">Mid-Market Sales Leaders</h3>
                     <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                       PitchHub kills "personalization tax," auto-building brand-perfect pitches so the team works
@@ -712,76 +710,72 @@ export default function PitchHubLanding() {
           <div className="container mx-auto max-w-7xl">
             {/* Pricing header removed per design */}
 
-            <div className="max-w-4xl mx-auto">
+            <div>
               <AnimatedSection animation="fade-up" delay={100}>
-                <Card className="border-0 bg-white">
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-8">
-                      {/* Left Section - Pricing and CTA */}
+                <Card className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
+                  <CardContent className="p-6 lg:p-8">
+                    <div className="grid lg:grid-cols-3 gap-7 lg:gap-10">
+                      {/* Column 1: Title, price, CTA */}
                       <div className="space-y-6">
-                        <div className="flex items-start justify-between">
-                          <h3 className="text-3xl font-bold text-gray-900">All in One</h3>
-                          <Badge className="bg-gray-100 text-gray-700 px-3 py-1 text-sm font-medium">
-                            to power you revenue ambitions
-                          </Badge>
+                        <div>
+                          <h3 className="text-3xl font-bold text-gray-900 whitespace-nowrap">All in One</h3>
                         </div>
-                        
                         <div className="flex items-baseline space-x-3">
                           <div className="text-4xl font-bold text-gray-900">$99</div>
                           <div className="text-lg text-gray-400 line-through">$200 /monthly</div>
                         </div>
-                        
-                        <Button className="w-full bg-black hover:bg-gray-900 text-white py-3 text-lg font-medium">
-                          Get Started for Free
-                          <ArrowRight className="w-5 h-5 ml-2" />
-                        </Button>
-                        
-                        <p className="text-sm text-gray-700">Cancel anytime. No questions asked!</p>
+                        {/* Removed subtitle pill per request */}
+                        {/* CTA */}
+                        <div className="pt-6 pb-3">
+                          <motion.div
+                            whileHover={{ y: -2, scale: 1.01 }}
+                            whileTap={{ scale: 0.99 }}
+                            transition={{ type: "spring", stiffness: 350, damping: 24 }}
+                          >
+                            <Button className="group w-full bg-black hover:bg-gray-900 text-white py-4 text-[1.125rem] leading-6 font-semibold rounded-lg">
+                              Get Started for Free
+                              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1.5" />
+                            </Button>
+                          </motion.div>
+                          <p className="text-sm text-gray-700 mt-4">Cancel anytime. No questions asked!</p>
+                        </div>
                       </div>
-                      
-                      {/* Right Section - Features */}
-                      <div className="space-y-4">
-                        <h4 className="text-lg font-bold text-gray-900">What's included:</h4>
-                        <div className="grid grid-cols-1 gap-3">
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">30 Articles a month generated and published on auto-pilot</span>
+
+                      {/* Columns 2-3 combined: What's included + centered bullets */}
+                      <div className="lg:col-span-2 flex flex-col justify-center">
+                        <h4 className="text-lg font-bold text-gray-900 mb-4">What's included:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 content-center">
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">Unlimited Personalized Pitches</span>
                           </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Auto Keyword Research made for you hands-free</span>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">Automated Lead Enrichment</span>
                           </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">High DR Backlinks built for you on auto-pilot through our <span className="text-blue-600">Backlink Exchange</span></span>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">Analytics</span>
                           </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Relevant YouTube videos integrated into articles</span>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">Intent Scoring</span>
                           </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Unlimited AI Rewrites</span>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">Priority Email Support</span>
                           </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Unlimited Users in your Organization</span>
-                          </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Integrates with WordPress, Webflow, Shopify, Framer and many <span className="text-blue-600">other platforms</span></span>
-                          </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">AI Images generated in different styles</span>
-                          </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-700">Articles generated in 150+ languages</span>
-                          </div>
-                          <div className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
                             <span className="text-gray-700">Custom Features requests</span>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">HubSpot Integration - coming soon</span>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                            <span className="text-gray-700">SalesForce Integration - coming soon</span>
                           </div>
                         </div>
                       </div>
