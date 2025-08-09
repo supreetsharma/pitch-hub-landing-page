@@ -1,0 +1,16 @@
+<svg width="40" height="40" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pf-grad-1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="pf-grad-2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <!-- Paper airplane (transparent background) -->
+  <path d="M50 75 L 150 50 L 100 150 L 85 115 Z" fill="url(#pf-grad-1)"/>
+  <path d="M50 75 L 100 150 L 100 90 Z" fill="url(#pf-grad-2)"/>
+</svg>
+
