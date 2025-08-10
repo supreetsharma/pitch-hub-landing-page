@@ -99,11 +99,7 @@ export default function PitchFabricLanding() {
               </h1>
             </AnimatedSection>
 
-              <AnimatedSection animation="fade-up" delay={150}>
-                <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
-                  Make Personalization Your {"#"}1 Revenue Channel
-                </h2>
-            </AnimatedSection>
+              
 
               <AnimatedSection animation="scale" delay={250}>
                 <div className="mt-6 flex flex-col items-center gap-3">
@@ -156,12 +152,12 @@ export default function PitchFabricLanding() {
                         src="/images/avatar-1.jpg" 
                         alt="User avatar" 
                         className="w-full h-full object-cover"
-                      />
-                    </div>
+                          />
+                        </div>
                     <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        <span className="text-red-500 font-semibold">Reps spend hours stitching</span> <span className="font-semibold text-gray-900">decks, PDFs, and links</span>
-                        —pitches feel templated instead of tailored.
+                        Reps scrape LinkedIn, websites, and news to guess at pains,{' '}
+                        <span className="text-red-500 italic">losing hours of selling time before the first email.</span>
                       </p>
                     </div>
                   </div>
@@ -175,8 +171,8 @@ export default function PitchFabricLanding() {
                     </div>
                     <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        <span className="text-red-500 font-semibold">Content lives across tools</span> (site, decks, case studies),
-                        so personalization stalls and follow‑ups go out off‑brand.
+                        <span className="text-red-500 italic">Manually stitching decks by copying slides and swapping logos</span>{' '}
+                        turns into tedious busywork that risks costly mistakes.
                       </p>
                     </div>
                   </div>
@@ -190,12 +186,29 @@ export default function PitchFabricLanding() {
                     </div>
                     <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        <span className="text-red-500 font-semibold">No signal on what resonates</span> — buyers skim emails while the
-                        <span className="font-semibold text-gray-900"> best proof never makes it into outreach</span>.
+                        Case studies, marketing{' '}
+                        <span className="text-red-500 italic">content scattered across different tools, follow‑ups go out off‑brand</span>{' '}
+                        and opportunities are missed.
                       </p>
                     </div>
                   </div>
-                </div>
+                  {/* Problem 4 */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
+                      <img
+                        src="/images/avatar-4.jpg"
+                        alt="User avatar"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
+                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                        Static PDFs, decks lack interactivity and clear calls‑to‑action, so{' '}
+                        <span className="text-red-500 italic">buyers bounce before they can truly engage.</span>
+                      </p>
+                    </div>
+                  </div>
+                        </div>
 
                 {/* Solution */}
                         <div>
@@ -205,7 +218,7 @@ export default function PitchFabricLanding() {
                       <span className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         PitchFabric
                       </span>
-                        </div>
+                          </div>
                     <h4 className="text-gray-900 font-semibold text-xl md:text-2xl mb-3 md:mb-4">
                       Turn every lead into a personalized, on‑brand microsite
                     </h4>
@@ -220,7 +233,7 @@ export default function PitchFabricLanding() {
                         <div key={i} className="flex items-center space-x-3">
                           <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
                             <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
-                          </div>
+              </div>
                           <span className="text-gray-800 text-base md:text-lg">{item}</span>
               </div>
                       ))}
