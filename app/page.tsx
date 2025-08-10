@@ -145,7 +145,7 @@ export default function PitchFabricLanding() {
 
               <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
                                 {/* Problems */}
-                <div className="space-y-4 md:space-y-6">
+                <div className="h-full space-y-3 md:space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
                       <img 
@@ -154,10 +154,9 @@ export default function PitchFabricLanding() {
                         className="w-full h-full object-cover"
                           />
                         </div>
-                    <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
-                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        Reps scrape LinkedIn, websites, and news to guess at pains,{' '}
-                        <span className="text-red-500 italic">losing hours of selling time before the first email.</span>
+                    <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
+                      <p className="text-gray-700 text-base md:text-lg leading-snug">
+                        Reps <span className="text-red-500">manually research Leads</span> to understand their pains, losing hours of selling time before the first email.
                       </p>
                     </div>
                   </div>
@@ -169,29 +168,13 @@ export default function PitchFabricLanding() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
-                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        <span className="text-red-500 italic">Manually stitching decks by copying slides and swapping logos</span>{' '}
-                        turns into tedious busywork that risks costly mistakes.
+                    <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
+                      <p className="text-gray-700 text-base md:text-lg leading-snug">
+                        <span className="text-red-500">Manually stitching decks</span> and logos turns into tedious busywork.
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
-                      <img 
-                        src="/images/avatar-3.jpg" 
-                        alt="User avatar" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
-                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        Case studies, marketing{' '}
-                        <span className="text-red-500 italic">content scattered across different tools, follow‑ups go out off‑brand</span>{' '}
-                        and opportunities are missed.
-                      </p>
-                    </div>
-                  </div>
+                  {/* Removed card: "Marketing content scattered across different tools, follow‑ups go off‑brand." */}
                   {/* Problem 4 */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
@@ -201,18 +184,17 @@ export default function PitchFabricLanding() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6 text-left flex-1">
-                      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                        Static PDFs, decks lack interactivity and clear calls‑to‑action, so{' '}
-                        <span className="text-red-500 italic">buyers bounce before they can truly engage.</span>
+                    <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
+                      <p className="text-gray-700 text-base md:text-lg leading-snug">
+                        Static <span className="text-red-500">pitch lacks interactivity</span> and clear calls‑to‑action, so buyers <span className="text-red-500">bounce before they can engage</span>.
                       </p>
                     </div>
                   </div>
                         </div>
 
                 {/* Solution */}
-                        <div>
-                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6">
+                        <div className="h-full">
+                  <div className="h-full flex flex-col bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6">
                     <div className="flex items-center space-x-3 mb-3 md:mb-4">
                       <img src="/logo-mark.svg" alt="PitchFabric logo" className="w-9 h-9 md:w-10 md:h-10" />
                       <span className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -220,22 +202,21 @@ export default function PitchFabricLanding() {
                       </span>
                           </div>
                     <h4 className="text-gray-900 font-semibold text-xl md:text-2xl mb-3 md:mb-4">
-                      Turn every lead into a personalized, on‑brand microsite
+                      Make Personalization Your #1 Revenue Channel
                     </h4>
                     <div className="space-y-3">
                       {[
-                        "Ingest your site, decks, PDFs—no manual copy‑paste",
-                        "AI assembles a brand‑perfect story for each prospect",
-                        "One smart link buyers explore on their own",
-                        "See what hits: time on page, clicks, and intent scoring",
-                        "Sync intent and engagement to your CRM",
+                        "Lead and product research done for you.",
+                        "Leads' pain points map to your solution.",
+                        "On brand, responsive pitch built in seconds.",
+                        "Scale personalization like never before!",
                       ].map((item, i) => (
                         <div key={i} className="flex items-center space-x-3">
                           <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
                             <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
-              </div>
-                          <span className="text-gray-800 text-base md:text-lg">{item}</span>
-              </div>
+                          </div>
+                          <span className={`text-base md:text-lg ${i === 3 ? 'text-purple-700 font-semibold' : 'text-gray-800'}`}>{item}</span>
+                        </div>
                       ))}
                     </div>
                   </div>
