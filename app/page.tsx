@@ -226,6 +226,135 @@ export default function PitchFabricLanding() {
       </section>
         </AnimatedSection>
 
+      {/* Demo Section */}
+      <AnimatedSection animation="fade-up">
+          <section className="py-16 md:py-20 px-6 bg-transparent">
+            <div className="container mx-auto max-w-7xl">
+              <div className="text-center mb-10 md:mb-16">
+              <AnimatedSection animation="fade-up">
+                  <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
+                    See PitchFabric in Action
+                  </h2>
+              </AnimatedSection>
+              </div>
+
+              <AnimatedSection animation="fade-up" delay={200}>
+                <div className="relative overflow-hidden carousel-container">
+                  <div
+                    className="flex space-x-6 carousel-track"
+                    style={{ animation: "infiniteScroll 30s linear infinite" }}
+                  >
+                    {/* Wiser → Best Buy */}
+                    <DemoCard
+                      leftImg="/images/wiser-logo.png"
+                      rightImg="/images/bestbuy-logo.png"
+                      leftAlt="Wiser"
+                      rightAlt="Best Buy"
+                      href="/demo/wiser-bestbuy.html"
+                    />
+                    {/* Apollo → LaunchDarkly */}
+                    <DemoCard
+                      leftImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg"
+                      rightImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif"
+                      leftAlt="Apollo"
+                      rightAlt="LaunchDarkly"
+                      href="/demo/apollo-launchdarkly.html"
+                    />
+                    {/* Fathom → Zendesk */}
+                    <DemoCard
+                      customLeft={
+                            <div className="flex items-center space-x-2">
+                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
+                            </div>
+                      }
+                      customRight={
+                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
+                              <span className="text-white font-bold text-xs">ZENDESK</span>
+                            </div>
+                      }
+                      href="/demo/fathom-zendesk.html"
+                    />
+                    {/* Linear → GitLab */}
+                    <DemoCard
+                      customLeft={
+                            <div className="flex items-center space-x-2">
+                              <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
+                                <div className="w-2 h-2 border border-white transform rotate-45"></div>
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm">Linear</span>
+                            </div>
+                      }
+                      customRight={
+                            <div className="flex items-center space-x-2">
+                              <div className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
+                                <div
+                                  className="w-2 h-2 bg-white"
+                                  style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+                            />
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm">GitLab</span>
+                            </div>
+                      }
+                      href="/demo/linear-gitlab.html"
+                    />
+                    {/* Gong → Snowflake */}
+                    <DemoCard
+                      customLeft={
+                            <div className="w-12 h-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded flex items-center justify-center">
+                              <span className="text-white font-bold text-xs">GONG</span>
+                            </div>
+                      }
+                      customRight={
+                            <div className="flex items-center space-x-2">
+                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                                <div className="text-white text-xs">❄</div>
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm">Snowflake</span>
+                            </div>
+                      }
+                      href="/demo/gong-snowflake.html"
+                    />
+                    {/* Duplicates for seamless loop */}
+                    <DemoCard
+                      leftImg="/images/wiser-logo.png"
+                      rightImg="/images/bestbuy-logo.png"
+                      leftAlt="Wiser"
+                      rightAlt="Best Buy"
+                      href="/demo/wiser-bestbuy.html"
+                    />
+                    <DemoCard
+                      leftImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg"
+                      rightImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif"
+                      leftAlt="Apollo"
+                      rightAlt="LaunchDarkly"
+                      href="/demo/apollo-launchdarkly.html"
+                    />
+                    <DemoCard
+                      customLeft={
+                            <div className="flex items-center space-x-2">
+                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
+                              </div>
+                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
+                            </div>
+                      }
+                      customRight={
+                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
+                              <span className="text-white font-bold text-xs">ZENDESK</span>
+                            </div>
+                      }
+                      href="/demo/fathom-zendesk.html"
+                    />
+                  </div>
+                </div>
+              </AnimatedSection>
+          </div>
+        </section>
+      </AnimatedSection>
+
         {/* Feature Section — Purple */}
       <AnimatedSection animation="fade-up">
           <section className="px-6 bg-white py-12 md:py-16">
@@ -503,134 +632,7 @@ export default function PitchFabricLanding() {
         </section>
       </AnimatedSection>
 
-      {/* Demo Section */}
-      <AnimatedSection animation="fade-up">
-          <section className="py-16 md:py-20 px-6 bg-transparent">
-            <div className="container mx-auto max-w-7xl">
-              <div className="text-center mb-10 md:mb-16">
-              <AnimatedSection animation="fade-up">
-                  <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
-                    See PitchFabric in Action
-                  </h2>
-              </AnimatedSection>
-              </div>
 
-              <AnimatedSection animation="fade-up" delay={200}>
-                <div className="relative overflow-hidden carousel-container">
-                  <div
-                    className="flex space-x-6 carousel-track"
-                    style={{ animation: "infiniteScroll 30s linear infinite" }}
-                  >
-                    {/* Wiser → Best Buy */}
-                    <DemoCard
-                      leftImg="/images/wiser-logo.png"
-                      rightImg="/images/bestbuy-logo.png"
-                      leftAlt="Wiser"
-                      rightAlt="Best Buy"
-                      href="/demo/wiser-bestbuy.html"
-                    />
-                    {/* Apollo → LaunchDarkly */}
-                    <DemoCard
-                      leftImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg"
-                      rightImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif"
-                      leftAlt="Apollo"
-                      rightAlt="LaunchDarkly"
-                      href="/demo/apollo-launchdarkly.html"
-                    />
-                    {/* Fathom → Zendesk */}
-                    <DemoCard
-                      customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
-                            </div>
-                      }
-                      customRight={
-                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">ZENDESK</span>
-                            </div>
-                      }
-                      href="/demo/fathom-zendesk.html"
-                    />
-                    {/* Linear → GitLab */}
-                    <DemoCard
-                      customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
-                                <div className="w-2 h-2 border border-white transform rotate-45"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">Linear</span>
-                            </div>
-                      }
-                      customRight={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
-                                <div
-                                  className="w-2 h-2 bg-white"
-                                  style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
-                            />
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">GitLab</span>
-                            </div>
-                      }
-                      href="/demo/linear-gitlab.html"
-                    />
-                    {/* Gong → Snowflake */}
-                    <DemoCard
-                      customLeft={
-                            <div className="w-12 h-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">GONG</span>
-                            </div>
-                      }
-                      customRight={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="text-white text-xs">❄</div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">Snowflake</span>
-                            </div>
-                      }
-                      href="/demo/gong-snowflake.html"
-                    />
-                    {/* Duplicates for seamless loop */}
-                    <DemoCard
-                      leftImg="/images/wiser-logo.png"
-                      rightImg="/images/bestbuy-logo.png"
-                      leftAlt="Wiser"
-                      rightAlt="Best Buy"
-                      href="/demo/wiser-bestbuy.html"
-                    />
-                    <DemoCard
-                      leftImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apollo_logotype_OnWhite_Logo.jpg-RVG4jOVsM2WkulhYrq3noJLoHkFlhw.jpeg"
-                      rightImg="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ld_logolockup-pGCumnXs8DyUX1Y1CPCvs6M3EETfe6.avif"
-                      leftAlt="Apollo"
-                      rightAlt="LaunchDarkly"
-                      href="/demo/apollo-launchdarkly.html"
-                    />
-                    <DemoCard
-                      customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
-                            </div>
-                      }
-                      customRight={
-                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">ZENDESK</span>
-                            </div>
-                      }
-                      href="/demo/fathom-zendesk.html"
-                    />
-                  </div>
-                </div>
-              </AnimatedSection>
-          </div>
-        </section>
-      </AnimatedSection>
 
         {/* Who This Is For */}
       <AnimatedSection animation="fade-up">
