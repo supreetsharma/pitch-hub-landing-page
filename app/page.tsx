@@ -74,32 +74,30 @@ export default function PitchFabricLanding() {
       <main>
         {/* Hero */}
         <section className="px-6 bg-white py-14">
-        <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12 lg:mb-16">
-            <AnimatedSection animation="fade-up">
+              <AnimatedSection animation="fade-up">
                 <h1 className="font-bold text-gray-900 tracking-tight leading-tight text-5xl md:text-6xl lg:text-7xl mb-6">
                   <span className="block mb-1.5 font-semibold">
-                  Go to market with{" "}
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    a personalized pitch
+                    Go to market with{" "}
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      a personalized pitch
                     </span>{" "}
                     and the ability to
                   </span>
                   <span
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-500 h-[1.2em] flex items-center justify-center"
-                  style={{ fontVariantNumeric: "tabular-nums" }}
-                >
-                  <span
-                    key={textKey}
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-in fade-in-0 slide-in-from-bottom-4 duration-300 font-semibold"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent transition-all duration-500 h-[1.2em] flex items-center justify-center"
+                    style={{ fontVariantNumeric: "tabular-nums" }}
                   >
-                    {dynamicText}
+                    <span
+                      key={textKey}
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-in fade-in-0 slide-in-from-bottom-4 duration-300 font-semibold"
+                    >
+                      {dynamicText}
+                    </span>
                   </span>
-                  </span>
-              </h1>
-            </AnimatedSection>
-
-              
+                </h1>
+              </AnimatedSection>
 
               <AnimatedSection animation="scale" delay={250}>
                 <div className="mt-6 flex flex-col items-center gap-3">
@@ -108,19 +106,19 @@ export default function PitchFabricLanding() {
                     whileTap={{ scale: 0.99 }}
                     transition={{ type: "spring", stiffness: 350, damping: 24 }}
                   >
-                        <Button
+                    <Button
                       size="lg"
-                      className="group bg-black hover:bg-gray-900 text-white rounded-xl px-8 py-6 text-base md:text-lg"
-                        >
+                      className="group bg-black hover:bg-gray-900 text-white rounded-xl px-10 py-8 text-lg md:text-xl lg:text-2xl font-bold shadow-2xl"
+                    >
                       Generate Your First Winning Pitch
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1.5" />
-                        </Button>
+                      <ArrowRight className="ml-3 h-6 w-6 md:h-7 md:w-7 transition-transform duration-200 group-hover:translate-x-1.5" />
+                    </Button>
                   </motion.div>
-                  <p className="text-sm text-gray-500">Free. AI-powered. Takes 60 seconds.</p>
-                      </div>
+                  <p className="text-base md:text-lg text-gray-500 font-medium">Free. AI-powered. Takes 60 seconds.</p>
+                </div>
               </AnimatedSection>
-                              </div>
-                            </div>
+            </div>
+          </div>
         </section>
 
         {/* Problem → Solution */}
@@ -140,37 +138,31 @@ export default function PitchFabricLanding() {
                   src="/svgs/curved-arrow-right.svg"
                   alt="arrow pointing to solution"
                   className="hidden lg:block absolute right-1/4 translate-x-1/2 top-14 w-16 md:w-20"
-                          />
-                        </div>
+                />
+              </div>
 
               <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
-                                {/* Problems */}
+                {/* Problems */}
                 <div className="h-full space-y-3 md:space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
-                      <img 
-                        src="/images/avatar-1.jpg" 
-                        alt="User avatar" 
-                        className="w-full h-full object-cover"
-                          />
-                        </div>
+                      <img src="/images/avatar-1.jpg" alt="User avatar" className="w-full h-full object-cover" />
+                    </div>
                     <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-snug">
-                        Reps <span className="text-red-500">manually research Leads</span> to understand their pains, losing hours of selling time before the first email.
+                        Reps <span className="text-red-500">manually research Leads</span> to understand their pains,
+                        losing hours of selling time before the first email.
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
-                      <img 
-                        src="/images/avatar-2.jpg" 
-                        alt="User avatar" 
-                        className="w-full h-full object-cover"
-                      />
+                      <img src="/images/avatar-2.jpg" alt="User avatar" className="w-full h-full object-cover" />
                     </div>
                     <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-snug">
-                        <span className="text-red-500">Manually stitching decks</span> and logos turns into tedious busywork.
+                        <span className="text-red-500">Manually stitching decks</span> and logos turns into tedious
+                        busywork.
                       </p>
                     </div>
                   </div>
@@ -178,29 +170,26 @@ export default function PitchFabricLanding() {
                   {/* Problem 4 */}
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-full border-4 border-gray-200 overflow-hidden flex-shrink-0">
-                      <img
-                        src="/images/avatar-4.jpg"
-                        alt="User avatar"
-                        className="w-full h-full object-cover"
-                      />
+                      <img src="/images/avatar-4.jpg" alt="User avatar" className="w-full h-full object-cover" />
                     </div>
                     <div className="bg-white rounded-xl rounded-tl-none border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-4 md:p-5 text-left flex-1">
                       <p className="text-gray-700 text-base md:text-lg leading-snug">
-                        Static <span className="text-red-500">pitch lacks interactivity</span> and clear calls‑to‑action, so buyers <span className="text-red-500">bounce before they can engage</span>.
+                        Static <span className="text-red-500">pitch lacks interactivity</span> and clear
+                        calls‑to‑action, so buyers <span className="text-red-500">bounce before they can engage</span>.
                       </p>
                     </div>
                   </div>
-                        </div>
+                </div>
 
                 {/* Solution */}
-                        <div className="h-full">
+                <div className="h-full">
                   <div className="h-full flex flex-col bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] p-5 md:p-6">
                     <div className="flex items-center space-x-3 mb-3 md:mb-4">
                       <img src="/logo-mark.svg" alt="PitchFabric logo" className="w-9 h-9 md:w-10 md:h-10" />
                       <span className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         PitchFabric
                       </span>
-                          </div>
+                    </div>
                     <h4 className="text-gray-900 font-semibold text-xl md:text-2xl mb-3 md:mb-4">
                       Make Personalization Your #1 Revenue Channel
                     </h4>
@@ -215,27 +204,31 @@ export default function PitchFabricLanding() {
                           <div className="w-5 h-5 bg-purple-600/10 rounded-full flex items-center justify-center">
                             <div className="w-2.5 h-2.5 bg-purple-600 rounded-full" />
                           </div>
-                          <span className={`text-base md:text-lg ${i === 3 ? 'text-purple-700 font-semibold' : 'text-gray-800'}`}>{item}</span>
+                          <span
+                            className={`text-base md:text-lg ${i === 3 ? "text-purple-700 font-semibold" : "text-gray-800"}`}
+                          >
+                            {item}
+                          </span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-          </div>
-        </div>
-      </section>
+              </div>
+            </div>
+          </section>
         </AnimatedSection>
 
-      {/* Demo Section */}
-      <AnimatedSection animation="fade-up">
+        {/* Demo Section */}
+        <AnimatedSection animation="fade-up">
           <section className="py-16 md:py-20 px-6 bg-transparent">
             <div className="container mx-auto max-w-7xl">
               <div className="text-center mb-10 md:mb-16">
-              <AnimatedSection animation="fade-up">
+                <AnimatedSection animation="fade-up">
                   <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
                     See PitchFabric in Action
                   </h2>
-              </AnimatedSection>
+                </AnimatedSection>
               </div>
 
               <AnimatedSection animation="fade-up" delay={200}>
@@ -263,57 +256,57 @@ export default function PitchFabricLanding() {
                     {/* Fathom → Zendesk */}
                     <DemoCard
                       customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
-                            </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                            <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
+                          </div>
+                          <span className="font-bold text-gray-900 text-sm">FATHOM</span>
+                        </div>
                       }
                       customRight={
-                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">ZENDESK</span>
-                            </div>
+                        <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">ZENDESK</span>
+                        </div>
                       }
                       href="/demo/fathom-zendesk.html"
                     />
                     {/* Linear → GitLab */}
                     <DemoCard
                       customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
-                                <div className="w-2 h-2 border border-white transform rotate-45"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">Linear</span>
-                            </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-5 h-5 bg-gray-900 rounded flex items-center justify-center">
+                            <div className="w-2 h-2 border border-white transform rotate-45"></div>
+                          </div>
+                          <span className="font-bold text-gray-900 text-sm">Linear</span>
+                        </div>
                       }
                       customRight={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
-                                <div
-                                  className="w-2 h-2 bg-white"
-                                  style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
+                        <div className="flex items-center space-x-2">
+                          <div className="w-5 h-5 bg-orange-500 rounded flex items-center justify-center">
+                            <div
+                              className="w-2 h-2 bg-white"
+                              style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}
                             />
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">GitLab</span>
-                            </div>
+                          </div>
+                          <span className="font-bold text-gray-900 text-sm">GitLab</span>
+                        </div>
                       }
                       href="/demo/linear-gitlab.html"
                     />
                     {/* Gong → Snowflake */}
                     <DemoCard
                       customLeft={
-                            <div className="w-12 h-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">GONG</span>
-                            </div>
+                        <div className="w-12 h-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">GONG</span>
+                        </div>
                       }
                       customRight={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="text-white text-xs">❄</div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">Snowflake</span>
-                            </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                            <div className="text-white text-xs">❄</div>
+                          </div>
+                          <span className="font-bold text-gray-900 text-sm">Snowflake</span>
+                        </div>
                       }
                       href="/demo/gong-snowflake.html"
                     />
@@ -334,317 +327,315 @@ export default function PitchFabricLanding() {
                     />
                     <DemoCard
                       customLeft={
-                            <div className="flex items-center space-x-2">
-                              <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
-                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
-                              </div>
-                              <span className="font-bold text-gray-900 text-sm">FATHOM</span>
-                            </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-5 h-5 bg-blue-500 rounded flex items-center justify-center">
+                            <div className="w-0 h-0 border-l-[4px] border-l-transparent border-b-[6px] border-b-white border-r-[4px] border-r-transparent"></div>
+                          </div>
+                          <span className="font-bold text-gray-900 text-sm">FATHOM</span>
+                        </div>
                       }
                       customRight={
-                            <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">ZENDESK</span>
-                            </div>
+                        <div className="w-14 h-6 bg-green-600 rounded flex items-center justify-center">
+                          <span className="text-white font-bold text-xs">ZENDESK</span>
+                        </div>
                       }
                       href="/demo/fathom-zendesk.html"
                     />
                   </div>
                 </div>
               </AnimatedSection>
-          </div>
-        </section>
-      </AnimatedSection>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Feature Section — Purple */}
-      <AnimatedSection animation="fade-up">
+        <AnimatedSection animation="fade-up">
           <section className="px-6 bg-white py-12 md:py-16">
-          <div className="container mx-auto max-w-7xl">
-            <Card className="border-transparent bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl overflow-hidden">
+            <div className="container mx-auto max-w-7xl">
+              <Card className="border-transparent bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl overflow-hidden">
                 <CardContent className="p-6 md:p-10 lg:p-12">
                   <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                  <AnimatedSection animation="fade-right" className="order-2 lg:order-1 relative">
+                    <AnimatedSection animation="fade-right" className="order-2 lg:order-1 relative">
                       <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6 border border-gray-100">
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-medium text-gray-700">Upload Progress</span>
-                          <span className="text-sm text-gray-500">3 of 5 files</span>
-                        </div>
-                        <div className="space-y-3">
-                          <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                            <FileText className="w-5 h-5 text-green-600" />
-                            <div className="flex-1">
-                              <div className="text-sm font-medium text-gray-900">Product-Overview.pdf</div>
-                              <div className="text-xs text-gray-500">2.4 MB • Brand colors extracted</div>
-                            </div>
-                            <CheckCircle className="w-5 h-5 text-green-500" />
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-medium text-gray-700">Upload Progress</span>
+                            <span className="text-sm text-gray-500">3 of 5 files</span>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
-                            <FileText className="w-5 h-5 text-green-600" />
-                            <div className="flex-1">
-                              <div className="text-sm font-medium text-gray-900">Case-Study-SaaS.pdf</div>
-                              <div className="text-xs text-gray-500">1.8 MB • Content analyzed</div>
+                          <div className="space-y-3">
+                            <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                              <FileText className="w-5 h-5 text-green-600" />
+                              <div className="flex-1">
+                                <div className="text-sm font-medium text-gray-900">Product-Overview.pdf</div>
+                                <div className="text-xs text-gray-500">2.4 MB • Brand colors extracted</div>
+                              </div>
+                              <CheckCircle className="w-5 h-5 text-green-500" />
                             </div>
-                            <CheckCircle className="w-5 h-5 text-green-500" />
-                          </div>
-                          <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
-                            <Upload className="w-5 h-5 text-blue-600" />
-                            <div className="flex-1">
-                              <div className="text-sm font-medium text-gray-900">Pricing-Deck.pptx</div>
-                              <div className="text-xs text-gray-500">Processing...</div>
+                            <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+                              <FileText className="w-5 h-5 text-green-600" />
+                              <div className="flex-1">
+                                <div className="text-sm font-medium text-gray-900">Case-Study-SaaS.pdf</div>
+                                <div className="text-xs text-gray-500">1.8 MB • Content analyzed</div>
+                              </div>
+                              <CheckCircle className="w-5 h-5 text-green-500" />
                             </div>
-                            <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                            <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+                              <Upload className="w-5 h-5 text-blue-600" />
+                              <div className="flex-1">
+                                <div className="text-sm font-medium text-gray-900">Pricing-Deck.pptx</div>
+                                <div className="text-xs text-gray-500">Processing...</div>
+                              </div>
+                              <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </AnimatedSection>
+                    </AnimatedSection>
 
-                  <AnimatedSection animation="fade-left" className="order-1 lg:order-2">
+                    <AnimatedSection animation="fade-left" className="order-1 lg:order-2">
                       <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
-                      Unlock the Revenue in Your Existing Collateral
-                    </h2>
+                        Unlock the Revenue in Your Existing Collateral
+                      </h2>
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                      Our AI mines your Website, PDFs, decks, and case studies, extracting the most relevant points to
+                        Our AI mines your Website, PDFs, decks, and case studies, extracting the most relevant points to
                         build a compelling, personalized narrative for each lead.
-                    </p>
+                      </p>
                       <div className="space-y-3 md:space-y-4">
-                      <AnimatedSection animation="fade-left" delay={100}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                            <Palette className="w-4 h-4 text-white" />
-                          </div>
+                        <AnimatedSection animation="fade-left" delay={100}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
+                              <Palette className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Automatic brand color and font detection
                             </span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-left" delay={200}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                            <Users className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-left" delay={200}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
+                              <Users className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">AI-powered lead enrichment</span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-left" delay={300}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
-                            <Zap className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-left" delay={300}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
+                              <Zap className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Winning message extraction and optimization
                             </span>
-                        </div>
-                      </AnimatedSection>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </AnimatedSection>
+                          </div>
+                        </AnimatedSection>
+                      </div>
+                    </AnimatedSection>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Feature Section — Blue */}
-      <AnimatedSection animation="fade-up">
+        <AnimatedSection animation="fade-up">
           <section className="px-6 bg-white py-12 md:py-px">
-          <div className="container mx-auto max-w-7xl">
-            <Card className="border-transparent bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl overflow-hidden">
+            <div className="container mx-auto max-w-7xl">
+              <Card className="border-transparent bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl overflow-hidden">
                 <CardContent className="p-6 md:p-10 lg:p-12">
                   <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                  <AnimatedSection animation="fade-right">
+                    <AnimatedSection animation="fade-right">
                       <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
-                      Book 3× more demos with personalized pitches
-                    </h2>
+                        Book 3× more demos with personalized pitches
+                      </h2>
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                         Our AI blends enriched lead with your content to create an on-brand responsive pitch — giving
                         you a better chance to convert.
                       </p>
                       <div className="space-y-3 md:space-y-4">
-                      <AnimatedSection animation="fade-right" delay={100}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                            <User className="w-4 h-4 text-white" />
-                          </div>
+                        <AnimatedSection animation="fade-right" delay={100}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                              <User className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Give every prospect a 1:1 experience
                             </span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-right" delay={200}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                            <Play className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-right" delay={200}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                              <Play className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Let buyers engage with interactive content
                             </span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-right" delay={300}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                            <Link className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-right" delay={300}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                              <Link className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Replace messy PDFs, decks with one smart link
                             </span>
-                        </div>
-                      </AnimatedSection>
-                    </div>
-                  </AnimatedSection>
+                          </div>
+                        </AnimatedSection>
+                      </div>
+                    </AnimatedSection>
 
-                  <AnimatedSection animation="fade-left" className="relative">
+                    <AnimatedSection animation="fade-left" className="relative">
                       <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6 border border-gray-100 relative overflow-hidden">
                         <div className="bg-gray-50 rounded-lg p-3 md:p-4 mb-4 flex items-center space-x-3">
-                        <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                           <span className="text-xs md:text-sm text-gray-500 font-mono ml-2 md:ml-4">
                             pitchfabric.app/acme-corp
                           </span>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="flex items-center space-x-3">
+                        </div>
+                        <div className="space-y-4">
+                          <div className="flex items-center space-x-3">
                             <div className="w-8 h-8 bg-blue-600 rounded-lg" aria-hidden="true" />
                             <span className="font-semibold text-gray-900 text-base md:text-lg">Acme Corp</span>
-                        </div>
+                          </div>
                           <h3 className="text-gray-900 font-semibold text-xl md:text-2xl">
-                          Hi Sarah, here's how we can help Acme Corp scale faster
-                        </h3>
+                            Hi Sarah, here's how we can help Acme Corp scale faster
+                          </h3>
                           <p className="text-gray-600 text-sm md:text-base">
-                          Based on your role as VP of Growth, we've tailored this presentation for your challenges.
-                        </p>
-                        <div className="space-y-3">
-                          <div>
-                            <div className="text-sm font-medium text-blue-900 mb-1">Your Challenge</div>
-                            <div className="text-sm text-gray-700">
-                              Scaling personalized outreach without losing the human touch
+                            Based on your role as VP of Growth, we've tailored this presentation for your challenges.
+                          </p>
+                          <div className="space-y-3">
+                            <div>
+                              <div className="text-sm font-medium text-blue-900 mb-1">Your Challenge</div>
+                              <div className="text-sm text-gray-700">
+                                Scaling personalized outreach without losing the human touch
+                              </div>
+                            </div>
+                            <div>
+                              <div className="text-sm font-medium text-green-900 mb-1">Our Solution</div>
+                              <div className="text-sm text-gray-700">
+                                AI-powered microsites that feel personally crafted for each prospect
+                              </div>
                             </div>
                           </div>
-                          <div>
-                            <div className="text-sm font-medium text-green-900 mb-1">Our Solution</div>
-                            <div className="text-sm text-gray-700">
-                              AI-powered microsites that feel personally crafted for each prospect
-                            </div>
-                          </div>
-                        </div>
                           <div className="text-gray-500 text-xs md:text-sm">Continue reading to learn more...</div>
                         </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </AnimatedSection>
+                        <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+                      </div>
+                    </AnimatedSection>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Feature Section — Green */}
-      <AnimatedSection animation="fade-up">
+        <AnimatedSection animation="fade-up">
           <section className="px-6 bg-white py-12 md:py-16">
-          <div className="container mx-auto max-w-7xl">
-            <Card className="border-transparent bg-gradient-to-br from-green-50 to-green-100 rounded-3xl overflow-hidden">
+            <div className="container mx-auto max-w-7xl">
+              <Card className="border-transparent bg-gradient-to-br from-green-50 to-green-100 rounded-3xl overflow-hidden">
                 <CardContent className="p-6 md:p-10 lg:p-12">
                   <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                  <AnimatedSection animation="fade-right" className="relative order-2 lg:order-1">
+                    <AnimatedSection animation="fade-right" className="relative order-2 lg:order-1">
                       <div className="bg-white rounded-2xl shadow-xl p-5 md:p-6 border border-gray-100">
-                      <div className="space-y-4">
+                        <div className="space-y-4">
                           <div className="flex items-center justify-between mb-2 md:mb-4">
                             <h3 className="text-gray-900 font-semibold text-lg md:text-xl">Engagement Analytics</h3>
-                          <Badge className="bg-green-100 text-green-800">Live</Badge>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-blue-50 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-blue-600">47</div>
-                            <div className="text-sm text-blue-700">Page Views</div>
+                            <Badge className="bg-green-100 text-green-800">Live</Badge>
                           </div>
-                          <div className="bg-purple-50 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-purple-600">3:42</div>
-                            <div className="text-sm text-purple-700">Avg. Time</div>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-blue-50 p-4 rounded-lg">
+                              <div className="text-2xl font-bold text-blue-600">47</div>
+                              <div className="text-sm text-blue-700">Page Views</div>
+                            </div>
+                            <div className="bg-purple-50 p-4 rounded-lg">
+                              <div className="text-2xl font-bold text-purple-600">3:42</div>
+                              <div className="text-sm text-purple-700">Avg. Time</div>
+                            </div>
+                            <div className="bg-green-50 p-4 rounded-lg">
+                              <div className="text-2xl font-bold text-green-600">89%</div>
+                              <div className="text-sm text-green-700">Scroll Depth</div>
+                            </div>
+                            <div className="bg-orange-50 p-4 rounded-lg">
+                              <div className="text-2xl font-bold text-orange-600">12</div>
+                              <div className="text-sm text-orange-700">CTA Clicks</div>
+                            </div>
                           </div>
-                          <div className="bg-green-50 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-green-600">89%</div>
-                            <div className="text-sm text-green-700">Scroll Depth</div>
+                          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                            <div className="flex items-center space-x-2 text-green-700">
+                              <TrendingUp className="w-5 h-5" />
+                              <span className="font-medium">High Buying Intent</span>
+                            </div>
+                            <p className="text-sm text-green-600 mt-1">
+                              Sarah viewed pricing 3x and downloaded case study
+                            </p>
                           </div>
-                          <div className="bg-orange-50 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-orange-600">12</div>
-                            <div className="text-sm text-orange-700">CTA Clicks</div>
-                          </div>
-                        </div>
-                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                          <div className="flex items-center space-x-2 text-green-700">
-                            <TrendingUp className="w-5 h-5" />
-                            <span className="font-medium">High Buying Intent</span>
-                          </div>
-                          <p className="text-sm text-green-600 mt-1">
-                            Sarah viewed pricing 3x and downloaded case study
-                          </p>
                         </div>
                       </div>
-                    </div>
-                  </AnimatedSection>
+                    </AnimatedSection>
 
-                  <AnimatedSection animation="fade-left" className="order-1 lg:order-2">
+                    <AnimatedSection animation="fade-left" className="order-1 lg:order-2">
                       <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
                         Stop Guessing. Start Closing
                       </h2>
                       <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-                      Track every interaction. Know when prospects are ready to buy with engagement scoring and
-                      real-time notifications.
-                    </p>
+                        Track every interaction. Know when prospects are ready to buy with engagement scoring and
+                        real-time notifications.
+                      </p>
                       <div className="space-y-3 md:space-y-4">
-                      <AnimatedSection animation="fade-left" delay={100}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
-                            <Eye className="w-4 h-4 text-white" />
-                          </div>
+                        <AnimatedSection animation="fade-left" delay={100}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                              <Eye className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Instantly see your most engaged leads
                             </span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-left" delay={200}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
-                            <BarChart3 className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-left" delay={200}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                              <BarChart3 className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">Know which content closes deals</span>
-                        </div>
-                      </AnimatedSection>
-                      <AnimatedSection animation="fade-left" delay={300}>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
-                            <Flame className="w-4 h-4 text-white" />
                           </div>
+                        </AnimatedSection>
+                        <AnimatedSection animation="fade-left" delay={300}>
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
+                              <Flame className="w-4 h-4 text-white" />
+                            </div>
                             <span className="text-gray-700 text-base md:text-lg">
                               Focus your time on the hottest leads
                             </span>
-                        </div>
-                      </AnimatedSection>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      </AnimatedSection>
-
-
+                          </div>
+                        </AnimatedSection>
+                      </div>
+                    </AnimatedSection>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Who This Is For */}
-      <AnimatedSection animation="fade-up">
+        <AnimatedSection animation="fade-up">
           <section id="customers" className="px-6 bg-white py-12 md:py-16">
             <div className="container mx-auto max-w-7xl">
               <div className="text-center mb-10 md:mb-16">
-              <AnimatedSection animation="fade-up">
+                <AnimatedSection animation="fade-up">
                   <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
-                  Turn every lead into pipeline fuel
-                </h2>
-              </AnimatedSection>
-            </div>
+                    Turn every lead into pipeline fuel
+                  </h2>
+                </AnimatedSection>
+              </div>
 
               <div className="grid lg:grid-cols-3 gap-7 lg:gap-10">
                 {[
@@ -678,37 +669,37 @@ export default function PitchFabricLanding() {
                 ].map((card, idx) => (
                   <AnimatedSection key={idx} animation="fade-up" delay={(idx + 1) * 100}>
                     <Card className="h-full bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
-                  <CardContent className="p-8">
+                      <CardContent className="p-8">
                         <h3 className="text-gray-900 font-semibold text-2xl md:text-3xl mb-3">{card.title}</h3>
                         <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-5">{card.body}</p>
                         <div className="space-y-3">
                           {card.bullets.map((b, i) => (
                             <div key={i} className="flex items-start space-x-3">
-                        <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-5 h-5 text-gray-600 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-700 text-base">{b}</span>
-                      </div>
+                            </div>
                           ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </AnimatedSection>
                 ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
+          </section>
+        </AnimatedSection>
 
-                 {/* Pricing */}
-      <AnimatedSection animation="fade-up">
-           <section id="pricing" className="py-12 md:py-16 px-6 bg-white">
-          <div className="container mx-auto max-w-7xl">
-               <div className="text-center mb-10 md:mb-16">
-              <AnimatedSection animation="fade-up">
-                   <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
-                     Make Personalization Your #1 Revenue Channel
-                   </h2>
-              </AnimatedSection>
-            </div>
+        {/* Pricing */}
+        <AnimatedSection animation="fade-up">
+          <section id="pricing" className="py-12 md:py-16 px-6 bg-white">
+            <div className="container mx-auto max-w-7xl">
+              <div className="text-center mb-10 md:mb-16">
+                <AnimatedSection animation="fade-up">
+                  <h2 className="text-gray-900 font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl">
+                    Make Personalization Your #1 Revenue Channel
+                  </h2>
+                </AnimatedSection>
+              </div>
               <AnimatedSection animation="fade-up" delay={100}>
                 <Card className="bg-white rounded-xl border border-[#E6EAF2] shadow-[0_1px_2px_rgba(16,24,40,0.06),_0_8px_24px_rgba(16,24,40,0.04)] transition-all duration-300 transform-gpu hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)]">
                   <CardContent className="p-6 lg:p-8">
@@ -717,11 +708,11 @@ export default function PitchFabricLanding() {
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-gray-900 font-bold text-2xl md:text-3xl whitespace-nowrap">All in One</h3>
-            </div>
-                                                 <div className="flex items-baseline space-x-3">
-                           <div className="text-4xl font-bold text-gray-900">$29</div>
-                           <div className="text-lg text-gray-400 line-through">$50 /monthly</div>
-            </div>
+                        </div>
+                        <div className="flex items-baseline space-x-3">
+                          <div className="text-4xl font-bold text-gray-900">$29</div>
+                          <div className="text-lg text-gray-400 line-through">$50 /monthly</div>
+                        </div>
                         <div className="pt-4 md:pt-6 pb-1 md:pb-3">
                           <motion.div
                             whileHover={{ y: -2, scale: 1.01 }}
@@ -734,8 +725,8 @@ export default function PitchFabricLanding() {
                             </Button>
                           </motion.div>
                           <p className="text-sm text-gray-700 mt-4">Cancel anytime. No questions asked!</p>
-              </div>
-            </div>
+                        </div>
+                      </div>
 
                       {/* Right: features */}
                       <div className="lg:col-span-2 flex flex-col justify-center">
@@ -754,44 +745,44 @@ export default function PitchFabricLanding() {
                             <div key={i} className="flex items-center space-x-3">
                               <CheckCircle className="w-5 h-5 text-gray-600 flex-shrink-0" />
                               <span className="text-gray-700 text-base">{feat}</span>
-            </div>
-                      ))}
-                    </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </AnimatedSection>
-          </div>
-        </section>
-      </AnimatedSection>
+            </div>
+          </section>
+        </AnimatedSection>
 
-      {/* Final CTA */}
-      <AnimatedSection animation="fade-up">
+        {/* Final CTA */}
+        <AnimatedSection animation="fade-up">
           <section className="py-16 md:py-20 px-6 bg-gradient-to-r from-gray-900 to-black text-white">
-          <div className="container mx-auto max-w-4xl text-center">
-            <AnimatedSection animation="fade-up">
+            <div className="container mx-auto max-w-4xl text-center">
+              <AnimatedSection animation="fade-up">
                 <h2 className="font-semibold tracking-tight text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
                   Ready to turn every lead into pipeline fuel?
                 </h2>
                 <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
                   Join teams who've ditched generic outreach for AI-powered personalization. Create your first pitch in
                   under 60 seconds.
-              </p>
-            </AnimatedSection>
-            <AnimatedSection animation="scale" delay={200}>
-              <Button
-                size="lg"
+                </p>
+              </AnimatedSection>
+              <AnimatedSection animation="scale" delay={200}>
+                <Button
+                  size="lg"
                   className="bg-white text-gray-900 hover:bg-gray-100 text-base md:text-lg px-8 py-6 rounded-xl"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Create Personalized Pitch for free
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </AnimatedSection>
-          </div>
-        </section>
-      </AnimatedSection>
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
+                  Create Personalized Pitch for free
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </AnimatedSection>
+            </div>
+          </section>
+        </AnimatedSection>
       </main>
 
       {/* Footer */}
